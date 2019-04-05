@@ -4,6 +4,7 @@
 #include <QMainWindow>
 #include <QSystemTrayIcon>
 #include <QMessageBox>
+#include <QDebug>
 
 namespace Ui {
 class MainWindow;
@@ -17,10 +18,10 @@ public:
     explicit MainWindow(QWidget *parent = nullptr);
     void createTrayIcon();
     void createActions();
-    void Do();
     ~MainWindow();
 
-
+public slots:
+    void IQ42Do();
 
 private:
     Ui::MainWindow *ui;
