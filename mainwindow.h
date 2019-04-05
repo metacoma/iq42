@@ -15,10 +15,12 @@ class MainWindow : public QMainWindow
 
 public:
     explicit MainWindow(QWidget *parent = nullptr);
+    void createTrayIcon();
     ~MainWindow();
 
 private:
     Ui::MainWindow *ui;
+    QSystemTrayIcon *trayIcon;
 };
 
 #endif // MAINWINDOW_H
