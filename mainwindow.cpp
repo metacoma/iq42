@@ -34,6 +34,7 @@ void MainWindow::Screenshot() {
 void MainWindow::Initialize() {
    screen = QGuiApplication::primaryScreen();
    backendApi = new IQ42Api();
+   backendApi->Ping();
 }
 
 void MainWindow::createTrayIcon() {

@@ -12,7 +12,7 @@ class IQ42Api
 public:
     IQ42Api();
     void setBackendURL(QString URL);
-    QString getBackendURL();
+    QUrl getBackendURL();
 
     void Ping();
 
