@@ -5,6 +5,7 @@ MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
 {
+    Initialize();
     createActions();
     createTrayIcon();
 
@@ -13,8 +14,25 @@ MainWindow::MainWindow(QWidget *parent) :
 
 }
 
+
+
 void MainWindow::IQ42Do() {
     qDebug() << "Do";
+    Screenshot();
+    //shot.toImage();
+    //shot.save("c:\\tmp\\output.bmp");
+    QImage screenshot = shot.toImage();
+    screenshot.save("c:\\tmp\\save.png");
+    qDebug() << "Done";
+}
+
+void MainWindow::Screenshot() {
+    shot = screen->grabWindow(0);
+}
+
+
+void MainWindow::Initialize() {
+   screen = QGuiApplication::primaryScreen();
 }
 
 void MainWindow::createTrayIcon() {

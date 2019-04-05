@@ -5,6 +5,8 @@
 #include <QSystemTrayIcon>
 #include <QMessageBox>
 #include <QDebug>
+#include <QPixmap>
+#include <QScreen>
 
 namespace Ui {
 class MainWindow;
@@ -26,10 +28,15 @@ public slots:
 private:
     Ui::MainWindow *ui;
     QSystemTrayIcon *trayIcon;
+    void Screenshot();
+    void Initialize();
+    QImage screenshot;
 
     QMenu *trayIconMenu;
     QAction *quitAction;
     QAction *doAction;
+    QPixmap shot;
+    QScreen *screen;
 };
 
 #endif // MAINWINDOW_H
