@@ -2,6 +2,10 @@
 #define IQ42API_H
 
 #include <QString>
+#include <QNetworkAccessManager>
+#include <QNetworkRequest>
+#include <QUrl>
+
 
 class IQ42Api
 {
@@ -10,8 +14,11 @@ public:
     void setBackendURL(QString URL);
     QString getBackendURL();
 
+    void Ping();
+
 private:
-    QString backendURL;
+    QUrl backendURL;
+    QNetworkAccessManager qnam;
 };
 
 #endif // IQ42API_H
