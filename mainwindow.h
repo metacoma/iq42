@@ -7,6 +7,7 @@
 #include <QDebug>
 #include <QPixmap>
 #include <QScreen>
+#include "iq42api.h"
 
 namespace Ui {
 class MainWindow;
@@ -30,6 +31,8 @@ private:
     QSystemTrayIcon *trayIcon;
     void Screenshot();
     void Initialize();
+
+    IQ42Api *backendApi;
     QImage screenshot;
 
     QMenu *trayIconMenu;
