@@ -17,7 +17,7 @@ int main(int argc, char *argv[])
 
     MainWindow w;
     w.setWindowIcon(QIcon(":/images/iq42_icon32x32.png"));
-    w.createTrayIcon();
+    //w.createTrayIcon();
     w.show();
 
     return a.exec();
