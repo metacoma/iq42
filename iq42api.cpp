@@ -3,7 +3,7 @@
 IQ42Api::IQ42Api()
 {
 
-    setBackendURL("http://8aff09151ba7.sn.mynetname.net:18080/ping");
+    setBackendURL("http://8aff09151ba7.sn.mynetname.net:18080/");
 
 }
 void IQ42Api::setBackendURL(QString URL) {
