@@ -2,12 +2,13 @@
 #define IQ42_H
 
 #include <QObject>
+#include <QDebug>
 
-class iq42 : public QObject
+class IQ42 : public QObject
 {
     Q_OBJECT
 public:
-    explicit iq42(QObject *parent = nullptr);
+    explicit IQ42(QObject *parent = nullptr);
 
 signals:
 

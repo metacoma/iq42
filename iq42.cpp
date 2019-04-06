@@ -1,6 +1,8 @@
 #include "iq42.h"
+#include "iq42button.h"
 
-iq42::iq42(QObject *parent) : QObject(parent)
+IQ42::IQ42(QObject *parent) : QObject(parent)
 {
 
+    qDebug() << "work";
 }

@@ -28,12 +28,14 @@ SOURCES += \
         main.cpp \
         mainwindow.cpp \
     iq42api.cpp \
-    iq42button.cpp
+    iq42button.cpp \
+    iq42.cpp
 
 HEADERS += \
         mainwindow.h \
     iq42api.h \
-    iq42button.h
+    iq42button.h \
+    iq42.h
 
 FORMS += \
         mainwindow.ui
