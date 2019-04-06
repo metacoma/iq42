@@ -12,7 +12,9 @@ IQ42Api::~IQ42Api() {
 }
 
 void IQ42Api::PingFinished() {
-    qDebug() << "Ping reply finished";
+    QString pingReply = QString::fromStdString(reply->readAll().toStdString());
+    qDebug() << "Ping reply finished answer: " << pingReply;
+
 }
 
 void IQ42Api::Ping() {
