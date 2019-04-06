@@ -8,8 +8,10 @@
 #include <QUrl>
 #include <QDebug>
 #include <QNetworkReply>
-
-
+#include <QJsonDocument>
+#include <QJsonObject>
+#include <QImage>
+#include <QBuffer>
 
 class IQ42Api : public QObject
 {
@@ -21,6 +23,7 @@ public:
     ~IQ42Api();
     void setBackendURL(QString URL);
     QUrl getBackendURL();
+    void uploadImage(QImage image);
 
     void Ping();
 

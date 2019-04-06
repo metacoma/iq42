@@ -22,7 +22,7 @@ void MainWindow::IQ42Do() {
     //shot.toImage();
     //shot.save("c:\\tmp\\output.bmp");
     QImage screenshot = shot.toImage();
-    screenshot.save("c:\\tmp\\save.png");
+    backendApi->uploadImage(screenshot);
     qDebug() << "Done";
 }
 
