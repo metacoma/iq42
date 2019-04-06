@@ -12,8 +12,17 @@ IQ42Api::~IQ42Api() {
 }
 
 void IQ42Api::PingFinished() {
-    QString pingReply = QString::fromStdString(reply->readAll().toStdString());
-    qDebug() << "Ping reply finished answer: " << pingReply;
+
+    if (reply->error() == QNetworkReply::NoError) {
+
+        QString pingReply = QString::fromStdString(reply->readAll().toStdString());
+        qDebug() << "Ping reply finished answer: " << pingReply;
+        //QJsonDocument doc = QJsonDocument::fromJson((QString)reply->readAll());
+    } else {
+        // TODO fire fail event
+        qDebug() << "Network error";
+    }
+
 
 }
 
