@@ -9,7 +9,15 @@ MainWindow::MainWindow(QWidget *parent) :
     createActions();
     createTrayIcon();
 
+
+
     ui->setupUi(this);
+
+    IQ42Button *sampleButton1 = new IQ42Button(parent);
+    sampleButton1->show();
+
+    IQ42Button *sampleButton2 = new IQ42Button(parent);
+    sampleButton2->show();
 
 
 }

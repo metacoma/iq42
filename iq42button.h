@@ -3,16 +3,20 @@
 
 #include <QObject>
 #include <QWidget>
+#include <QtQuickWidgets/QQuickWidget>
 
-class IQ42Button : public QObject
+class IQ42Button : public QWidget
 {
     Q_OBJECT
 public:
-    explicit IQ42Button(QObject *parent = nullptr);
+    explicit IQ42Button(QWidget *parent = nullptr);
 
 signals:
 
 public slots:
+
+private:
+    QQuickWidget *m_quickWidget;
 };
 
 #endif // IQ42BUTTON_H

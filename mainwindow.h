@@ -8,6 +8,7 @@
 #include <QPixmap>
 #include <QScreen>
 #include "iq42api.h"
+#include "iq42button.h"
 
 namespace Ui {
 class MainWindow;

@@ -1,5 +1,7 @@
 #include "mainwindow.h"
 #include <QApplication>
+#include <QQmlApplicationEngine>
+#include <QQmlContext>
 
 int main(int argc, char *argv[])
 {
@@ -13,11 +15,8 @@ int main(int argc, char *argv[])
         return 1;
     }
 
-
-
     MainWindow w;
     w.setWindowIcon(QIcon(":/images/iq42_icon32x32.png"));
-    //w.createTrayIcon();
     w.show();
 
     return a.exec();

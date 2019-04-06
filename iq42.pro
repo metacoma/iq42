@@ -4,7 +4,7 @@
 #
 #-------------------------------------------------
 
-QT       += core gui network
+QT       += core gui network quickwidgets
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -27,11 +27,13 @@ CONFIG += c++11
 SOURCES += \
         main.cpp \
         mainwindow.cpp \
-    iq42api.cpp
+    iq42api.cpp \
+    iq42button.cpp
 
 HEADERS += \
         mainwindow.h \
-    iq42api.h
+    iq42api.h \
+    iq42button.h
 
 FORMS += \
         mainwindow.ui
@@ -42,4 +44,5 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
 RESOURCES += \
-    systraylogo.qrc
+    systraylogo.qrc \
+    qml.qrc
